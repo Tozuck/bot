@@ -15,7 +15,6 @@ echo "Updating package list and installing system dependencies..."
 sudo apt-get update
 sudo apt-get install -y python3-pip python3-dev libzbar0
 apt install python3.12-venv
-
 # Create a virtual environment
 echo "Creating a virtual environment..."
 python3 -m venv $VENV_DIR
@@ -23,6 +22,15 @@ python3 -m venv $VENV_DIR
 # Activate the virtual environment
 echo "Activating the virtual environment..."
 source $VENV_DIR/bin/activate
+
+# Create requirements.txt
+echo "Creating requirements.txt..."
+cat > $REQUIREMENTS_FILE << EOL
+pyTelegramBotAPI
+requests==2.28.1
+Pillow==9.1.1
+pyzbar==0.1.9
+EOL
 
 # Install Python dependencies
 echo "Installing Python dependencies..."

@@ -13,8 +13,8 @@ CRON_JOB="@reboot $BOT_DIR/bot.sh"
 # Update package list and install system dependencies
 echo "Updating package list and installing system dependencies..."
 sudo apt-get update
-sudo apt-get install -y python3-pip python3-dev libzbar0
-apt install python3.12-venv
+sudo apt-get install -y python3-pip python3-dev libzbar0 libjpeg-dev zlib1g-dev
+
 # Create a virtual environment
 echo "Creating a virtual environment..."
 python3 -m venv $VENV_DIR

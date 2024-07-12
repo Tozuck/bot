@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Define the necessary variables
-BOT_SCRIPT="toz.py"
-REQUIREMENTS_FILE="requirements.txt"
+BOT_SCRIPT="~/bot/toz.py"
+REQUIREMENTS_FILE="~/bot/requirements.txt"
 LOG_DIR="logs"
 VENV_DIR="venv"
-CRON_JOB="@reboot ~/bot.sh"
+CRON_JOB="@reboot ~/bot/bot.sh"
 
 # Update package list and install system dependencies
 echo "Updating package list and installing system dependencies..."
